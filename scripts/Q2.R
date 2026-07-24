@@ -101,14 +101,43 @@ ggplot(
     fill = "steelblue"
   ) +
   facet_wrap(
-    ~ Stage
+    ~ Stage,
+    ncol = 4,
+    labeller = labeller(
+      Stage = c(
+        "group stage" = "Group Stage",
+        "second group stage" = "Second Group Stage",
+        "round of 16" = "Round of 16",
+        "quarter-finals" = "Quarter-finals",
+        "semi-finals" = "Semi-finals",
+        "third-place match" = "Third-place Match",
+        "final" = "Final",
+        "final round" = "Final Round"
+      )
+    )
   ) +
   labs(
     title = "Distribution of Home Team Scores by Competition Stage",
     x = "Home Team Score",
     y = "Number of Matches"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      hjust = 0.5
+    ),
+    strip.text = element_text(
+      face = "bold"
+    ),
+    panel.grid.minor = element_blank()
+  ) +
+  scale_x_continuous(
+    breaks = 0:10
+  ) +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
 
 
 ###############################################################
@@ -145,7 +174,14 @@ ggplot(
     x = "Home Team Score",
     y = "Number of Matches"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    strip.text = element_text(face = "bold"),
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    axis.text = element_text(size = 8),
+    pannel.grid.minor = element_blank()
+  )    
+
   
 
 ###############################################################

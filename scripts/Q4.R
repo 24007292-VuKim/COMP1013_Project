@@ -186,7 +186,7 @@ ggplot(
 
 
 ###############################################################
-# PART F - Validate the results
+# PART G - Validate the results
 ###############################################################
 
 # Display the structure of the dataset.

@@ -1,7 +1,7 @@
 #################################################
 # COMP1013 Assignment
 # Question 1
-# Name: Vu Ngoc Thien Kim
+# Name:Vu Ngoc Thien Kim
 # Student ID: 22245448
 # Purpose:
 # This script performs data inspection, data cleaning and
@@ -276,3 +276,5 @@ summary(matches$AwayPenalty)
 # Check filtered data
 
 head(penalty_matches)
+
+getwd()
